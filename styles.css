@@ -325,6 +325,34 @@ body {
   margin-bottom: 10px;
 }
 
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.impact-card {
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: linear-gradient(160deg, rgba(107, 231, 255, 0.06), rgba(20, 27, 36, 0.9));
+  display: grid;
+  gap: 10px;
+}
+
+.impact-card h4 {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.now-card {
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  padding: 20px;
+  font-size: 1.02rem;
+  color: var(--muted);
+}
+
 .coursework {
   background: var(--surface);
   padding: 24px;
