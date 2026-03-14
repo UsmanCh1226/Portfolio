@@ -1,9 +1,9 @@
 :root {
-  --bg: #0f141a;
-  --surface: #141b24;
-  --surface-2: #1b2430;
-  --accent: #d6ff6b;
-  --accent-2: #6be7ff;
+  --bg: #0b0e13;
+  --surface: #111824;
+  --surface-2: #1a2433;
+  --accent: #00f5d4;
+  --accent-2: #4ea8de;
   --text: #f4f5f7;
   --muted: #b6bcc6;
   --border: rgba(255, 255, 255, 0.08);
@@ -18,7 +18,7 @@
 
 body {
   font-family: "Spectral", serif;
-  background: radial-gradient(circle at top left, #19212b 0%, #0f141a 55%, #0c1016 100%);
+  background: radial-gradient(circle at top left, #1a2334 0%, #0b0e13 55%, #080a0f 100%);
   color: var(--text);
   min-height: 100vh;
   line-height: 1.6;
@@ -35,9 +35,9 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(107, 231, 255, 0.12), transparent 40%),
-    radial-gradient(circle at 80% 0%, rgba(214, 255, 107, 0.1), transparent 38%),
-    radial-gradient(circle at 80% 80%, rgba(155, 121, 255, 0.08), transparent 45%);
+  background: radial-gradient(circle at 20% 20%, rgba(78, 168, 222, 0.14), transparent 40%),
+    radial-gradient(circle at 80% 0%, rgba(0, 245, 212, 0.12), transparent 38%),
+    radial-gradient(circle at 80% 80%, rgba(88, 130, 193, 0.1), transparent 45%);
   pointer-events: none;
   z-index: 0;
 }
@@ -142,10 +142,10 @@ body {
 
 .button.primary {
   background: var(--accent);
-  color: #0b0f14;
+  color: #061018;
   font-weight: 600;
   border: none;
-  box-shadow: 0 10px 25px rgba(214, 255, 107, 0.25);
+  box-shadow: 0 10px 25px rgba(0, 245, 212, 0.25);
 }
 
 .button.ghost {
@@ -185,7 +185,7 @@ body {
 }
 
 .portrait {
-  background: linear-gradient(140deg, rgba(214, 255, 107, 0.2), rgba(107, 231, 255, 0.1));
+  background: linear-gradient(140deg, rgba(0, 245, 212, 0.2), rgba(78, 168, 222, 0.12));
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -256,7 +256,7 @@ body {
 
 .card:hover {
   transform: translateY(-6px);
-  border-color: rgba(214, 255, 107, 0.4);
+  border-color: rgba(0, 245, 212, 0.4);
 }
 
 .card h3 {
@@ -287,7 +287,7 @@ body {
 .card-tags span {
   border-radius: 999px;
   padding: 6px 12px;
-  background: rgba(107, 231, 255, 0.15);
+  background: rgba(78, 168, 222, 0.15);
   color: var(--accent-2);
   font-size: 12px;
   font-family: "Space Grotesk", sans-serif;
@@ -387,7 +387,7 @@ body {
 }
 
 .course-list span {
-  background: rgba(214, 255, 107, 0.12);
+  background: rgba(0, 245, 212, 0.12);
   color: var(--accent);
   padding: 8px 14px;
   border-radius: 999px;
