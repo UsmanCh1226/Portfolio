@@ -330,6 +330,19 @@ body {
   content: "–";
 }
 
+.case-link {
+  display: inline-flex;
+  margin-top: 10px;
+  color: var(--accent);
+  text-decoration: none;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.9rem;
+}
+
+.case-link:hover {
+  text-decoration: underline;
+}
+
 .card-tags span {
   border-radius: 999px;
   padding: 6px 12px;
@@ -434,6 +447,59 @@ body {
   border: none;
   border-radius: 12px;
   background: #fff;
+}
+
+.project-hero {
+  display: grid;
+  gap: 16px;
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+
+.project-hero h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: var(--muted);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.9rem;
+}
+
+.project-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px;
+  display: grid;
+  gap: 12px;
+}
+
+.project-section h3 {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.project-section ul {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+}
+
+.project-section ul li::before {
+  content: "•";
+  margin-right: 8px;
+  color: var(--accent);
+}
+
+.project-layout {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 64px;
 }
 
 .note {
