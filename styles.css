@@ -408,13 +408,18 @@ body {
   padding: 20px;
   border-radius: 16px;
   border: 1px solid var(--border);
-  background: linear-gradient(160deg, rgba(107, 231, 255, 0.06), rgba(20, 27, 36, 0.9));
+  background: linear-gradient(160deg, rgba(78, 168, 222, 0.08), rgba(17, 24, 36, 0.9));
   display: grid;
   gap: 10px;
 }
 
 .impact-card h4 {
   font-family: "Space Grotesk", sans-serif;
+}
+
+.impact-detail {
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .now-card {
@@ -542,6 +547,11 @@ body {
   display: flex;
   gap: 16px;
   color: var(--muted);
+}
+
+.contact-phone {
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .site-footer {
