@@ -492,6 +492,7 @@ body {
   color: var(--muted);
   font-size: 0.9rem;
   text-align: right;
+  word-break: break-word;
 }
 
 .resume-columns {
@@ -689,5 +690,11 @@ body {
   }
   .resume-contact {
     text-align: left;
+  }
+}
+
+@media (min-width: 900px) {
+  .resume-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
