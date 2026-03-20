@@ -95,8 +95,8 @@
                 evaluation.
               </p>
               <ul class="card-points">
-                <li>Pipeline: data cleaning → training → evaluation.</li>
-                <li>Emphasis on reproducibility and model interpretability.</li>
+                <li>Designed a CNN for MRI classification with augmentation.</li>
+                <li>Validated performance with accuracy and loss tracking.</li>
               </ul>
               <details class="card-details">
                 <summary>Project details</summary>
@@ -124,8 +124,8 @@
                 deployed the experience as a fast, recruiter-friendly demo.
               </p>
               <ul class="card-points">
-                <li>Focused on low-friction UX and clear outputs.</li>
-                <li>Built for quick validation and shareable results.</li>
+                <li>Transfer learning on ResNet for retinal pathology signals.</li>
+                <li>Standardized 5,000+ images with OpenCV preprocessing.</li>
               </ul>
               <details class="card-details">
                 <summary>Project details</summary>
@@ -171,6 +171,56 @@
               <a class="card-link" href="https://github.com/UsmanCh1226/MoodBank" target="_blank" rel="noreferrer">
                 View on GitHub
               </a>
+            </article>
+
+            <article class="card reveal">
+              <h3>Rocket Launch Predictor</h3>
+              <p>
+                Predictive model for launch success using weather and telemetry
+                data to surface scrub risk factors.
+              </p>
+              <ul class="card-points">
+                <li>XGBoost with feature importance for key variables.</li>
+                <li>Analyzed weather + telemetry to flag launch risk.</li>
+              </ul>
+              <details class="card-details">
+                <summary>Project details</summary>
+                <p>
+                  Built a model to identify factors like wind speed and cloud
+                  cover that influence orbital insertion success.
+                </p>
+              </details>
+              <div class="card-tags">
+                <span>XGBoost</span>
+                <span>Analytics</span>
+                <span>Python</span>
+              </div>
+              <span class="card-link muted-link">Case study coming soon</span>
+            </article>
+
+            <article class="card reveal">
+              <h3>EyeHealth Computer Vision</h3>
+              <p>
+                Transfer-learning CV pipeline to detect ocular health indicators
+                with high-precision retinal classification.
+              </p>
+              <ul class="card-points">
+                <li>ResNet-based pipeline with OpenCV preprocessing.</li>
+                <li>Processed 5,000+ medical images for stability.</li>
+              </ul>
+              <details class="card-details">
+                <summary>Project details</summary>
+                <p>
+                  Built a reproducible CV workflow to surface retinal pathologies
+                  using standardized image preprocessing steps.
+                </p>
+              </details>
+              <div class="card-tags">
+                <span>PyTorch</span>
+                <span>OpenCV</span>
+                <span>ResNet</span>
+              </div>
+              <span class="card-link muted-link">Case study coming soon</span>
             </article>
           </div>
         </section>
@@ -302,13 +352,115 @@
         <section class="section" id="resume">
           <div class="section-header">
             <h2>Resume</h2>
-            <p>Embedded PDF for quick review.</p>
+            <p>Concise HTML summary with impact-focused bullets.</p>
           </div>
-          <div class="resume-card">
-            <iframe
-              src="assets/UsmanChaudhry_Resume.pdf"
-              title="Usman Chaudhry Resume"
-            ></iframe>
+          <div class="resume-shell">
+            <div class="resume-header">
+              <div>
+                <h3>Usman Chaudhry</h3>
+                <p>Data Science • ML • Computer Vision</p>
+              </div>
+              <div class="resume-contact">
+                <span>734-496-5096</span>
+                <span>usmanch@umich.edu</span>
+                <span>linkedin.com/in/usman-chaudhry1</span>
+                <span>github.com/UsmanCh1226</span>
+              </div>
+            </div>
+
+            <div class="resume-columns">
+              <div class="resume-block">
+                <h4>Education</h4>
+                <div class="resume-item">
+                  <div class="resume-item-header">
+                    <span>University of Michigan</span>
+                    <span>Ann Arbor, MI</span>
+                  </div>
+                  <p>B.S. Data Science, GPA 3.92/4.00</p>
+                  <p class="resume-dates">Jan 2026 – May 2028</p>
+                </div>
+                <div class="resume-item">
+                  <div class="resume-item-header">
+                    <span>University of Michigan – Dearborn</span>
+                    <span>Dearborn, MI</span>
+                  </div>
+                  <p>B.S. Data Science, GPA 3.92/4.00</p>
+                  <p class="resume-dates">Aug 2024 – Dec 2025</p>
+                </div>
+              </div>
+
+              <div class="resume-block">
+                <h4>Experience</h4>
+                <div class="resume-item">
+                  <div class="resume-item-header">
+                    <span>Undergraduate Research Assistant, MIDAS</span>
+                    <span>Ann Arbor, MI</span>
+                  </div>
+                  <p class="resume-dates">Dec 2026 – Present</p>
+                  <ul class="resume-bullets">
+                    <li>Architected a social network analysis framework for 25M users, measuring a 930% jump in network density after political catalysts.</li>
+                    <li>Integrated AT Protocol API to extract 235M posts with multithreaded scripts at 15,000 records/min.</li>
+                    <li>Built BERT + LDA topic modeling pipeline with 88% accuracy for ICWSM research.</li>
+                  </ul>
+                </div>
+                <div class="resume-item">
+                  <div class="resume-item-header">
+                    <span>Data Science Research Member, DSA</span>
+                    <span>Ann Arbor, MI</span>
+                  </div>
+                  <p class="resume-dates">Aug 2025 – Present</p>
+                  <ul class="resume-bullets">
+                    <li>Engineered a telemetry visualization suite for 10 key flight metrics for propulsion teams.</li>
+                    <li>Built baseline ML models (70–85% accuracy) via feature engineering and preprocessing.</li>
+                    <li>Standardized evaluation with Precision/Recall/F1 summaries for model selection.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="resume-block">
+                <h4>Projects</h4>
+                <div class="resume-item">
+                  <div class="resume-item-header">
+                    <span>EyeHealth Computer Vision</span>
+                    <span>Jan 2026 – Present</span>
+                  </div>
+                  <ul class="resume-bullets">
+                    <li>Developing a CV pipeline using transfer learning on ResNet for retinal pathology detection.</li>
+                    <li>Standardized 5,000+ medical images with OpenCV preprocessing for lighting variance.</li>
+                  </ul>
+                </div>
+                <div class="resume-item">
+                  <div class="resume-item-header">
+                    <span>Rocket Launch Predictor</span>
+                    <span>Dec 2025 – Present</span>
+                  </div>
+                  <ul class="resume-bullets">
+                    <li>Built an XGBoost model for launch success based on weather + telemetry data.</li>
+                    <li>Used feature importance to surface drivers like wind speed and cloud cover.</li>
+                  </ul>
+                </div>
+                <div class="resume-item">
+                  <div class="resume-item-header">
+                    <span>Brain Tumor Classifier</span>
+                    <span>Apr 2025 – Jun 2025</span>
+                  </div>
+                  <ul class="resume-bullets">
+                    <li>Designed a CNN for MRI binary classification with data augmentation to reduce overfitting.</li>
+                    <li>Validated performance via accuracy/loss before deploying via Streamlit.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="resume-block">
+                <h4>Technical Skills</h4>
+                <p><strong>Languages:</strong> Python, R, SQL (Postgres), C++, Java, JavaScript, HTML/CSS</p>
+                <p><strong>ML &amp; CV:</strong> PyTorch, TensorFlow, Keras, XGBoost, BERT, LDA, OpenCV, NetworkX, scikit-learn</p>
+                <p><strong>Engineering:</strong> AT Protocol API, Git LFS, Docker, GCP, Flask, FastAPI, Next.js</p>
+                <p><strong>Analytics:</strong> Pandas, NumPy, Matplotlib, Seaborn, Tidyverse, ggplot2, Chart.js</p>
+              </div>
+            </div>
+
+            <a class="button ghost" href="assets/UsmanChaudhry_Resume.pdf">Download PDF version</a>
           </div>
         </section>
 

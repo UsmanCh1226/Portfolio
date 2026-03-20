@@ -343,6 +343,12 @@ body {
   text-decoration: underline;
 }
 
+.muted-link {
+  color: var(--muted);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.9rem;
+}
+
 .card-tags span {
   border-radius: 999px;
   padding: 6px 12px;
@@ -452,6 +458,93 @@ body {
   border: none;
   border-radius: 12px;
   background: #fff;
+}
+
+.resume-shell {
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 24px;
+  display: grid;
+  gap: 20px;
+}
+
+.resume-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 16px;
+}
+
+.resume-header h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+}
+
+.resume-contact {
+  display: grid;
+  gap: 4px;
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.resume-columns {
+  display: grid;
+  gap: 18px;
+}
+
+.resume-block {
+  display: grid;
+  gap: 12px;
+}
+
+.resume-block h4 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.1rem;
+}
+
+.resume-item {
+  display: grid;
+  gap: 6px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.resume-item:last-child {
+  border-bottom: none;
+}
+
+.resume-item-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: space-between;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.resume-dates {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.resume-bullets {
+  list-style: none;
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.resume-bullets li::before {
+  content: "•";
+  margin-right: 8px;
+  color: var(--accent);
 }
 
 .project-hero {
@@ -593,5 +686,8 @@ body {
   }
   .hero {
     padding-top: 40px;
+  }
+  .resume-contact {
+    text-align: left;
   }
 }
