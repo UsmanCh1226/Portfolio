@@ -1,0 +1,10 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0B0E13"/>
+  <circle cx="980" cy="140" r="180" fill="#111824"/>
+  <circle cx="980" cy="140" r="140" stroke="#00F5D4" stroke-width="10"/>
+  <path d="M865 170C900 110 950 90 980 90C1010 90 1060 110 1095 170" stroke="#4EA8DE" stroke-width="10" stroke-linecap="round"/>
+  <text x="90" y="230" fill="#F4F5F7" font-family="Space Grotesk, Arial" font-size="64" font-weight="600">Usman Chaudhry</text>
+  <text x="90" y="310" fill="#00F5D4" font-family="Space Grotesk, Arial" font-size="36">Data Science • ML • Computer Vision</text>
+  <text x="90" y="380" fill="#B6BCC6" font-family="Spectral, Arial" font-size="28">Hard work, clear results.</text>
+  <rect x="90" y="430" width="420" height="6" fill="#4EA8DE"/>
+</svg>
