@@ -27,6 +27,33 @@ body {
   position: relative;
 }
 
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::before {
+  background: radial-gradient(circle at 20% 10%, rgba(0, 245, 212, 0.08), transparent 45%),
+    radial-gradient(circle at 80% 20%, rgba(78, 168, 222, 0.08), transparent 45%);
+  animation: pulseGlow 10s ease-in-out infinite;
+}
+
+body::after {
+  background: repeating-linear-gradient(
+    120deg,
+    rgba(78, 168, 222, 0.06) 0px,
+    rgba(78, 168, 222, 0.06) 1px,
+    transparent 1px,
+    transparent 120px
+  );
+  opacity: 0.35;
+  animation: driftLines 14s linear infinite;
+}
+
 a:focus-visible,
 button:focus-visible,
 summary:focus-visible {
@@ -57,6 +84,7 @@ summary:focus-visible {
   margin: 0 auto;
   padding: 32px 24px 64px;
   position: relative;
+  z-index: 1;
 }
 
 .page::after {
@@ -173,11 +201,12 @@ summary:focus-visible {
 .highlight-card h4 {
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.4rem;
+  letter-spacing: -0.01em;
 }
 
 .highlight-card p {
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
 }
 
 .highlight-card:hover {
@@ -190,6 +219,7 @@ summary:focus-visible {
   font-size: clamp(2.8rem, 5vw, 4rem);
   line-height: 1.05;
   margin-bottom: 18px;
+  letter-spacing: -0.02em;
 }
 
 .hero-copy h1 span {
@@ -210,7 +240,7 @@ summary:focus-visible {
 }
 
 .lead {
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   color: var(--muted);
   margin-bottom: 24px;
 }
@@ -323,12 +353,14 @@ summary:focus-visible {
 
 .section-header h2 {
   font-family: "Space Grotesk", sans-serif;
-  font-size: 2rem;
+  font-size: clamp(1.8rem, 2.4vw, 2.2rem);
   margin-bottom: 8px;
+  letter-spacing: -0.01em;
 }
 
 .section-header p {
   color: var(--muted);
+  font-size: 1rem;
 }
 
 .card-grid {
@@ -357,6 +389,7 @@ summary:focus-visible {
 .card h3 {
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.3rem;
+  letter-spacing: -0.01em;
 }
 
 .card-tags {
@@ -474,11 +507,12 @@ summary:focus-visible {
 
 .snapshot-card h4 {
   font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -0.01em;
 }
 
 .snapshot-card p {
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
 }
 
 .focus-list h4 {
@@ -530,11 +564,12 @@ summary:focus-visible {
 
 .impact-card h4 {
   font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -0.01em;
 }
 
 .impact-detail {
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
 }
 
 .now-card {
@@ -542,7 +577,7 @@ summary:focus-visible {
   border: 1px solid var(--glass-border);
   background: var(--glass);
   padding: 20px;
-  font-size: 1.02rem;
+  font-size: 1rem;
   color: var(--muted);
   backdrop-filter: blur(12px);
 }
@@ -595,6 +630,7 @@ summary:focus-visible {
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.4rem;
   margin-bottom: 6px;
+  letter-spacing: -0.01em;
 }
 
 .resume-contact {
@@ -620,6 +656,7 @@ summary:focus-visible {
 .resume-block h4 {
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.1rem;
+  letter-spacing: -0.01em;
 }
 
 .resume-item {
@@ -651,7 +688,7 @@ summary:focus-visible {
   display: grid;
   gap: 6px;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.94rem;
 }
 
 .resume-bullets li::before {
@@ -670,6 +707,7 @@ summary:focus-visible {
 .project-hero h1 {
   font-family: "Space Grotesk", sans-serif;
   font-size: clamp(2.4rem, 4vw, 3.2rem);
+  letter-spacing: -0.02em;
 }
 
 .project-meta {
@@ -759,7 +797,7 @@ summary:focus-visible {
 
 .contact-phone {
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
 }
 
 .site-footer {
@@ -811,6 +849,25 @@ summary:focus-visible {
   * {
     animation: none !important;
     transition: none !important;
+  }
+}
+
+@keyframes driftLines {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 240px 240px;
+  }
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.5;
   }
 }
 
