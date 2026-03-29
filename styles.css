@@ -8,6 +8,8 @@
   --muted: #b6bcc6;
   --border: rgba(255, 255, 255, 0.08);
   --shadow: 0 24px 60px rgba(10, 12, 16, 0.35);
+  --glass: rgba(17, 24, 36, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.12);
 }
 
 * {
@@ -86,6 +88,16 @@ summary:focus-visible {
   z-index: 0;
 }
 
+.section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -32px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(78, 168, 222, 0.5), transparent);
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -94,7 +106,7 @@ summary:focus-visible {
   justify-content: space-between;
   align-items: center;
   padding: 16px 0;
-  background: rgba(15, 20, 26, 0.8);
+  background: rgba(11, 14, 19, 0.8);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
@@ -149,11 +161,13 @@ summary:focus-visible {
 
 .highlight-card {
   border-radius: 16px;
-  border: 1px solid var(--border);
-  background: rgba(17, 24, 36, 0.8);
+  border: 1px solid var(--glass-border);
+  background: var(--glass);
   padding: 18px;
   display: grid;
   gap: 8px;
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .highlight-card h4 {
@@ -164,6 +178,11 @@ summary:focus-visible {
 .highlight-card p {
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.highlight-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 245, 212, 0.4);
 }
 
 .hero-copy h1 {
@@ -209,7 +228,7 @@ summary:focus-visible {
   border-radius: 999px;
   text-decoration: none;
   border: 1px solid var(--border);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .button.primary {
@@ -227,6 +246,7 @@ summary:focus-visible {
 
 .button:hover {
   transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(78, 168, 222, 0.18);
 }
 
 .hero-stats {
@@ -247,13 +267,14 @@ summary:focus-visible {
 }
 
 .hero-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
   border-radius: 24px;
   padding: 24px;
   box-shadow: var(--shadow);
   display: grid;
   gap: 20px;
+  backdrop-filter: blur(16px);
 }
 
 .portrait {
@@ -317,18 +338,20 @@ summary:focus-visible {
 }
 
 .card {
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
   border-radius: 20px;
   padding: 24px;
   display: grid;
   gap: 14px;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(14px);
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(0, 245, 212, 0.4);
+  transform: translateY(-6px) scale(1.01);
+  border-color: rgba(0, 245, 212, 0.45);
+  box-shadow: 0 18px 40px rgba(0, 245, 212, 0.12);
 }
 
 .card h3 {
@@ -415,16 +438,22 @@ summary:focus-visible {
   text-decoration: none;
   color: var(--accent);
   font-family: "Space Grotesk", sans-serif;
+  transition: color 0.2s ease;
+}
+
+.card-link:hover {
+  color: var(--accent-2);
 }
 
 .split {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 28px;
-  background: var(--surface);
+  background: var(--glass);
   padding: 24px;
   border-radius: 20px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(14px);
 }
 
 .snapshot-grid {
@@ -434,12 +463,13 @@ summary:focus-visible {
 }
 
 .snapshot-card {
-  background: var(--surface-2);
+  background: var(--glass);
   border-radius: 16px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--glass-border);
   padding: 18px;
   display: grid;
   gap: 8px;
+  backdrop-filter: blur(12px);
 }
 
 .snapshot-card h4 {
@@ -472,8 +502,9 @@ summary:focus-visible {
 .skill-block {
   padding: 20px;
   border-radius: 16px;
-  border: 1px solid var(--border);
-  background: var(--surface-2);
+  border: 1px solid var(--glass-border);
+  background: var(--glass);
+  backdrop-filter: blur(12px);
 }
 
 .skill-block h4 {
@@ -490,10 +521,11 @@ summary:focus-visible {
 .impact-card {
   padding: 20px;
   border-radius: 16px;
-  border: 1px solid var(--border);
-  background: linear-gradient(160deg, rgba(78, 168, 222, 0.08), rgba(17, 24, 36, 0.9));
+  border: 1px solid var(--glass-border);
+  background: linear-gradient(160deg, rgba(78, 168, 222, 0.08), rgba(17, 24, 36, 0.75));
   display: grid;
   gap: 10px;
+  backdrop-filter: blur(12px);
 }
 
 .impact-card h4 {
@@ -507,18 +539,20 @@ summary:focus-visible {
 
 .now-card {
   border-radius: 18px;
-  border: 1px solid var(--border);
-  background: var(--surface-2);
+  border: 1px solid var(--glass-border);
+  background: var(--glass);
   padding: 20px;
   font-size: 1.02rem;
   color: var(--muted);
+  backdrop-filter: blur(12px);
 }
 
 .coursework {
-  background: var(--surface);
+  background: var(--glass);
   padding: 24px;
   border-radius: 20px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
 }
 
 .resume-card {
@@ -539,11 +573,12 @@ summary:focus-visible {
 
 .resume-shell {
   border-radius: 20px;
-  border: 1px solid var(--border);
-  background: var(--surface);
+  border: 1px solid var(--glass-border);
+  background: var(--glass);
   padding: 24px;
   display: grid;
   gap: 20px;
+  backdrop-filter: blur(14px);
 }
 
 .resume-header {
@@ -647,12 +682,13 @@ summary:focus-visible {
 }
 
 .project-section {
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
   border-radius: 18px;
   padding: 22px;
   display: grid;
   gap: 12px;
+  backdrop-filter: blur(12px);
 }
 
 .project-section h3 {
@@ -701,12 +737,13 @@ summary:focus-visible {
 
 .contact-card {
   border-radius: 20px;
-  border: 1px solid var(--border);
-  background: var(--surface);
+  border: 1px solid var(--glass-border);
+  background: var(--glass);
   padding: 24px;
   display: grid;
   gap: 12px;
   font-family: "Space Grotesk", sans-serif;
+  backdrop-filter: blur(14px);
 }
 
 .contact-card a {
